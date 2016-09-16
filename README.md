@@ -1,1 +1,4 @@
-# Joomla-Environment-Plugin
+Joomla-Environment-Plugin
+=========================
+
+Adds useful extra Environment constants.
