@@ -18,18 +18,18 @@ class plgSystemEnvironment extends JPlugin
     protected $autoloadLanguage = true;
 
     /**
-	 * @param   array  $options  Array holding options
-	 *
-	 * @return  boolean  True on success
-	 *
-	 * @since   3.2
-	 */
-	public function onAfterInitialise()
+     * @param   array  $options  Array holding options
+     *
+     * @return  boolean  True on success
+     *
+     * @since   3.2
+     */
+    public function onAfterInitialise()
     {
         $app = JFactory::getApplication();
-		if ($app->isAdmin()) {
-			return; // Don't run in admin
-		}
+        if ($app->isAdmin()) {
+            return; // Don't run in admin
+        }
         
         $application_env = $_SERVER['SERVER_NAME'] == 'intranet.npeu.ox.ac.uk' ? 'production' : 'development';
         define('APPLICATION_ENV', $application_env);
